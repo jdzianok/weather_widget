@@ -1,0 +1,49 @@
+.legend {
+  box-shadow: 12px 0 5px -5px rgba(160, 160, 160, 0.2);
+  width: 110px;
+  color: #888;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+  // border: 1px solid red;
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid rgba(212, 212, 212, 0.4);
+    font-size: 15px;
+    text-align: center;
+
+    &--day {
+      height: 30px;
+    }
+
+    &--hour {
+      height: 50px;
+    }
+
+    &--forecast {
+      height: 50px;
+    }
+
+    &--temperature {
+      height: 170px;
+    }
+
+    &--precipitation {
+      height: 90px;
+    }
+
+    &--wind_dir {
+      height: 90px;
+    }
+
+    &--wind_speed {
+      height: 80px;
+    }
+
+    &--pressure {
+      height: 150px;
+    }
+  }
+}
