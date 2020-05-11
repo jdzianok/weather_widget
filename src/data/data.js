@@ -1,4 +1,4 @@
-const data = [
+export const data = [
   {
     hour: "07:00",
     image: "sun-cloud",
@@ -153,6 +153,7 @@ const data = [
     pressure: 1014
   },
   {
+    day: "JUTRO",
     hour: "00:00",
     image: "moon-cloud",
     temp: 8,
@@ -190,7 +191,7 @@ const data = [
   },
   {
     hour: "04:00",
-    image: "rain",
+    image: "heavy-rain",
     temp: 7,
     rain: 0.9,
     windDir: "Zachodni",
@@ -199,7 +200,7 @@ const data = [
   },
   {
     hour: "05:00",
-    image: "rain",
+    image: "heavy-rain",
     temp: 7,
     rain: 0.9,
     windDir: "Zachodni",
@@ -208,7 +209,7 @@ const data = [
   },
   {
     hour: "06:00",
-    image: "rain",
+    image: "heavy-rain",
     temp: 6,
     rain: 0.8,
     windDir: "Zachodni",
