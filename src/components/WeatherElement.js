@@ -21,6 +21,34 @@ const WeatherElement = props => {
   } = props;
 
   let picture;
+  let arrowStyle;
+
+  const randomNumber = () => Math.floor(Math.random() * 21) - 10;
+
+  switch (windDir) {
+    case "Pd.-zach.":
+      arrowStyle = {
+        transform: `rotate(${-45 + randomNumber()}deg)`
+      };
+      break;
+    case "Południowy":
+      arrowStyle = {
+        transform: `rotate(${-90 + randomNumber()}deg)`
+      };
+      break;
+    case "Pd.-wsch.":
+      arrowStyle = {
+        transform: `rotate(${-135 + randomNumber()}deg)`
+      };
+      break;
+    case "Pn.-zach.":
+      arrowStyle = {
+        transform: `rotate(${45 + randomNumber()}deg)`
+      };
+      break;
+    default:
+      console.log(windDir);
+  }
 
   switch (image) {
     case "sun":
@@ -45,14 +73,14 @@ const WeatherElement = props => {
       console.log(image);
   }
 
-  const changeDot = value => {
-    return value
+  const changeDot = value =>
+    value
       .toString()
       .split(".")
       .join(",");
-  };
 
   const positionTemp = { bottom: `${temp * 5}px` };
+  const positionPress = { bottom: `${(pressure - 1000) * 5}px` };
 
   return (
     <div className="weather_column">
@@ -60,33 +88,55 @@ const WeatherElement = props => {
       <div className="weather_column__border_wrapper">
         <div className="weather_column__hour">{hour}</div>
         <div className="weather_column__forecast">
-          <img src={picture} alt={image} />
+          <img
+            className="weather_column__forecast_image"
+            src={picture}
+            alt={image}
+          />
         </div>
         <div className="weather_column__temperature">
-          <div style={positionTemp} className="content">
-            <p className="value">{temp}&#176;</p>
+          <div
+            style={positionTemp}
+            className="weather_column__temperature_content"
+          >
+            <p className="weather_column__temperature_content_value">
+              {temp}&#176;
+            </p>
             <span className={`temp-dot-${index}`}></span>
           </div>
         </div>
         <div className="weather_column__precipitation">
           {rain === 0 ? null : (
             <>
-              <p>{changeDot(rain)} mm</p>
-              <div style={{ height: `${rain * 14}px` }}></div>
+              <p className="weather_column__precipitation_description">
+                {changeDot(rain)} mm
+              </p>
+              <div
+                className="weather_column__precipitation_bar"
+                style={{ height: `${rain * 14}px` }}
+              ></div>
             </>
           )}
         </div>
         <div className="weather_column__wind_dir">
-          <img className={`${arrow}`} src={arrow} alt="arrow" />
-          <p>{windDir}</p>
+          <img
+            className="weather_column__wind_dir_image"
+            style={arrowStyle}
+            src={arrow}
+            alt="arrow"
+          />
+          <p className="weather_column__wind_dir_description">{windDir}</p>
         </div>
         <div className="weather_column__wind_speed">
-          <p>{wind[0]}</p>
-          <p>{wind[1]} km/h</p>
+          <p className="weather_column__wind_speed_description">{wind[0]}</p>
+          <p className="weather_column__wind_speed_value">{wind[1]} km/h</p>
         </div>
         <div className="weather_column__pressure">
-          <div className="content">
-            <p className="value">{pressure} hPa</p>
+          <div
+            style={positionPress}
+            className="weather_column__pressure_content"
+          >
+            <p className="weather_column__pressure_value">{pressure} hPa</p>
             <span className={`press-dot-${index}`}></span>
           </div>
         </div>

@@ -7,6 +7,9 @@
   }
   &__day {
     height: $day-height;
+    font-size: 1.8rem;
+    padding: 0.5rem 0 0 1rem;
+    color: rgb(212, 212, 212);
   }
   &__hour {
     height: $hour-height;
@@ -19,7 +22,7 @@
   &__forecast {
     height: $forecast-height;
 
-    img {
+    &_image {
       display: block;
       height: 100%;
       margin: 0 auto;
@@ -31,12 +34,12 @@
     height: $temperature-height;
     text-align: center;
 
-    .content {
+    &_content {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
 
-      .value {
+      &_value {
         font-size: 2.6rem;
         font-weight: 400;
       }
@@ -57,13 +60,71 @@
     display: flex;
     flex-direction: column-reverse;
     text-align: center;
-    p {
+    &_description {
       order: 1;
       font-size: 1.8rem;
     }
-    div {
+    &_bar {
       width: 100%;
       background-color: #3fd7f8;
+    }
+  }
+
+  &__wind_dir {
+    height: $wind-dir-height;
+    width: 100%;
+    background-color: #edefed;
+
+    &_image {
+      display: block;
+      height: 75%;
+      margin: 0 auto;
+    }
+
+    &_description {
+      font-size: 1.4rem;
+      text-align: center;
+    }
+  }
+
+  &__wind_speed {
+    height: $wind-speed-height;
+    padding: 2rem 0;
+    text-align: center;
+    background-color: #edefed;
+
+    &_description {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    &_value {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__pressure {
+    position: relative;
+    height: $pressure-height;
+    text-align: center;
+
+    &_content {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+    }
+    &_value {
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+
+    span {
+      display: block;
+      width: 1.4rem;
+      height: 1.4rem;
+      border: 0.1rem solid #000;
+      border-radius: 50%;
+      margin: 0.3rem auto 0;
     }
   }
 }
