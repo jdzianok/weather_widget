@@ -1,7 +1,7 @@
 export const data = [
   {
     hour: "07:00",
-    image: "sun-cloud",
+    image: "sun_cloud",
     temp: 6,
     rain: 0,
     windDir: "Zachodni",
@@ -19,7 +19,7 @@ export const data = [
   },
   {
     hour: "09:00",
-    image: "sun-cloud",
+    image: "sun_cloud",
     temp: 11,
     rain: 0,
     windDir: "Zachodni",
@@ -28,7 +28,7 @@ export const data = [
   },
   {
     hour: "10:00",
-    image: "sun-cloud",
+    image: "sun_cloud",
     temp: 13,
     rain: 0,
     windDir: "Zachodni",
@@ -37,7 +37,7 @@ export const data = [
   },
   {
     hour: "11:00",
-    image: "sun-cloud",
+    image: "sun_cloud",
     temp: 14,
     rain: 0,
     windDir: "Zachodni",
@@ -46,7 +46,7 @@ export const data = [
   },
   {
     hour: "12:00",
-    image: "sun-cloud",
+    image: "sun_cloud",
     temp: 15,
     rain: 0,
     windDir: "Zachodni",
@@ -55,7 +55,7 @@ export const data = [
   },
   {
     hour: "13:00",
-    image: "sun-cloud",
+    image: "sun_cloud",
     temp: 15,
     rain: 0,
     windDir: "Zachodni",
@@ -64,7 +64,7 @@ export const data = [
   },
   {
     hour: "14:00",
-    image: "sun-cloud",
+    image: "sun_cloud",
     temp: 16,
     rain: 0,
     windDir: "Zachodni",
@@ -73,7 +73,7 @@ export const data = [
   },
   {
     hour: "15:00",
-    image: "sun-cloud",
+    image: "sun_cloud",
     temp: 16,
     rain: 0,
     windDir: "Zachodni",
@@ -82,7 +82,7 @@ export const data = [
   },
   {
     hour: "16:00",
-    image: "sun-cloud",
+    image: "sun_cloud",
     temp: 16,
     rain: 0,
     windDir: "Zachodni",
@@ -91,7 +91,7 @@ export const data = [
   },
   {
     hour: "17:00",
-    image: "sun-cloud",
+    image: "sun_cloud",
     temp: 16,
     rain: 0,
     windDir: "Pd.-zach.",
@@ -100,7 +100,7 @@ export const data = [
   },
   {
     hour: "18:00",
-    image: "sun-cloud",
+    image: "sun_cloud",
     temp: 16,
     rain: 0,
     windDir: "Zachodni",
@@ -109,7 +109,7 @@ export const data = [
   },
   {
     hour: "19:00",
-    image: "sun-cloud",
+    image: "sun_cloud",
     temp: 15,
     rain: 0,
     windDir: "Zachodni",
@@ -118,7 +118,7 @@ export const data = [
   },
   {
     hour: "20:00",
-    image: "sun-cloud",
+    image: "sun_cloud",
     temp: 13,
     rain: 0,
     windDir: "Pd.-zach.",
@@ -127,7 +127,7 @@ export const data = [
   },
   {
     hour: "21:00",
-    image: "moon-cloud",
+    image: "moon_cloud",
     temp: 11,
     rain: 0,
     windDir: "Pd.-zach.",
@@ -136,7 +136,7 @@ export const data = [
   },
   {
     hour: "22:00",
-    image: "moon-cloud",
+    image: "moon_cloud",
     temp: 10,
     rain: 0,
     windDir: "Południowy",
@@ -145,7 +145,7 @@ export const data = [
   },
   {
     hour: "23:00",
-    image: "moon-cloud",
+    image: "moon_cloud",
     temp: 9,
     rain: 0,
     windDir: "Południowy",
@@ -155,7 +155,7 @@ export const data = [
   {
     day: "JUTRO",
     hour: "00:00",
-    image: "moon-cloud",
+    image: "moon_cloud",
     temp: 8,
     rain: 0,
     windDir: "Pd.-wsch.",
@@ -191,7 +191,7 @@ export const data = [
   },
   {
     hour: "04:00",
-    image: "heavy-rain",
+    image: "heavy_rain",
     temp: 7,
     rain: 0.9,
     windDir: "Zachodni",
@@ -200,7 +200,7 @@ export const data = [
   },
   {
     hour: "05:00",
-    image: "heavy-rain",
+    image: "heavy_rain",
     temp: 7,
     rain: 0.9,
     windDir: "Zachodni",
@@ -209,7 +209,7 @@ export const data = [
   },
   {
     hour: "06:00",
-    image: "heavy-rain",
+    image: "heavy_rain",
     temp: 6,
     rain: 0.8,
     windDir: "Zachodni",
@@ -263,7 +263,7 @@ export const data = [
   },
   {
     hour: "12:00",
-    image: "sun-cloud",
+    image: "sun_cloud",
     temp: 11,
     rain: 0,
     windDir: "Pn.-zach.",
@@ -272,7 +272,7 @@ export const data = [
   },
   {
     hour: "13:00",
-    image: "sun-cloud",
+    image: "sun_cloud",
     temp: 12,
     rain: 0,
     windDir: "Pn.-zach.",
@@ -281,7 +281,7 @@ export const data = [
   },
   {
     hour: "14:00",
-    image: "sun-cloud",
+    image: "sun_cloud",
     temp: 12,
     rain: 0,
     windDir: "Pn.-zach.",
@@ -290,7 +290,7 @@ export const data = [
   },
   {
     hour: "15:00",
-    image: "sun-cloud",
+    image: "sun_cloud",
     temp: 12,
     rain: 0,
     windDir: "Pn.-zach.",
@@ -299,7 +299,7 @@ export const data = [
   },
   {
     hour: "16:00",
-    image: "sun-cloud",
+    image: "sun_cloud",
     temp: 13,
     rain: 0,
     windDir: "Pn.-zach.",
@@ -308,7 +308,7 @@ export const data = [
   },
   {
     hour: "17:00",
-    image: "sun-cloud",
+    image: "sun_cloud",
     temp: 12,
     rain: 0,
     windDir: "Pn.-zach.",
@@ -317,7 +317,7 @@ export const data = [
   },
   {
     hour: "18:00",
-    image: "sun-cloud",
+    image: "sun_cloud",
     temp: 12,
     rain: 0,
     windDir: "Pn.-zach.",
@@ -326,7 +326,7 @@ export const data = [
   },
   {
     hour: "19:00",
-    image: "sun-cloud",
+    image: "sun_cloud",
     temp: 12,
     rain: 0,
     windDir: "Pn.-zach.",
@@ -335,7 +335,7 @@ export const data = [
   },
   {
     hour: "20:00",
-    image: "sun-cloud",
+    image: "sun_cloud",
     temp: 11,
     rain: 0,
     windDir: "Zachodni",
@@ -344,7 +344,7 @@ export const data = [
   },
   {
     hour: "21:00",
-    image: "moon-cloud",
+    image: "moon_cloud",
     temp: 10,
     rain: 0,
     windDir: "Zachodni",
@@ -353,7 +353,7 @@ export const data = [
   },
   {
     hour: "22:00",
-    image: "moon-cloud",
+    image: "moon_cloud",
     temp: 9,
     rain: 0,
     windDir: "Zachodni",
@@ -362,7 +362,7 @@ export const data = [
   },
   {
     hour: "23:00",
-    image: "moon-cloud",
+    image: "moon_cloud",
     temp: 7,
     rain: 0,
     windDir: "Zachodni",
