@@ -38,6 +38,7 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
+      z-index: 2;
 
       &_value {
         font-size: 2.6rem;
@@ -49,6 +50,7 @@
         width: 1.4rem;
         height: 1.4rem;
         border: 0.1rem solid #000;
+        background-color: #fff;
         border-radius: 50%;
         margin: 0.3rem auto 0;
       }
@@ -71,6 +73,7 @@
   }
 
   &__wind_dir {
+    position: relative;
     height: $wind-dir-height;
     width: 100%;
     background-color: #edefed;
@@ -85,6 +88,16 @@
       font-size: 1.4rem;
       text-align: center;
     }
+  }
+
+  &__wind_dir::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -2px;
+    width: 2px;
+    height: $wind-dir-height + $wind-speed-height;
+    background-color: #fff;
   }
 
   &__wind_speed {
@@ -112,6 +125,7 @@
       left: 50%;
       transform: translateX(-50%);
       width: 100%;
+      z-index: 2;
     }
     &_value {
       font-size: 1.6rem;
@@ -123,8 +137,13 @@
       width: 1.4rem;
       height: 1.4rem;
       border: 0.1rem solid #000;
+      background-color: #fff;
       border-radius: 50%;
       margin: 0.3rem auto 0;
     }
   }
+}
+
+.weather_column:last-child .weather_column__wind_dir::after {
+  display: none;
 }

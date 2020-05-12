@@ -46,8 +46,13 @@ const WeatherElement = props => {
         transform: `rotate(${45 + randomNumber()}deg)`
       };
       break;
+    case "Zachodni":
+      arrowStyle = {
+        transform: "rotate(0)"
+      };
+      break;
     default:
-      console.log(windDir);
+      console.log("error");
   }
 
   switch (image) {
