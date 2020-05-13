@@ -8,22 +8,12 @@ import sun_cloud from "../assets/sun-cloud.svg";
 import sun from "../assets/sun.svg";
 
 const WeatherElement = props => {
-  const {
-    day,
-    hour,
-    image,
-    temp,
-    rain,
-    windDir,
-    wind,
-    pressure,
-    index
-  } = props;
+  const { day, hour, image, temp, rain, windDir, wind, pressure, id } = props;
 
   let picture;
   let arrowStyle;
 
-  // funkcja do storzenia randomowej liczby między -10 a 10, której używam do uzyskania minimalnego odchylenia przy rotacji strzałek wiatru
+  // funkcja do stworzenia randomowej liczby między -10 a 10, której używam do uzyskania minimalnego odchylenia przy rotacji strzałek wiatru
   const randomNumber = () => Math.floor(Math.random() * 21) - 10;
 
   switch (windDir) {
@@ -79,6 +69,7 @@ const WeatherElement = props => {
       console.log(image);
   }
 
+  // funkcja do zamiany kropki na przecinek w wartości opadów
   const changeDot = value =>
     value
       .toString()
@@ -108,7 +99,7 @@ const WeatherElement = props => {
             <p className="weather_column__temperature_content_value">
               {temp}&#176;
             </p>
-            <span className={`temp-dot-${index}`}></span>
+            <span className={`temp-dot-${id}`}></span>
           </div>
         </div>
         <div className="weather_column__precipitation">
@@ -143,7 +134,7 @@ const WeatherElement = props => {
             className="weather_column__pressure_content"
           >
             <p className="weather_column__pressure_value">{pressure} hPa</p>
-            <span className={`press-dot-${index}`}></span>
+            <span className={`press-dot-${id}`}></span>
           </div>
         </div>
       </div>

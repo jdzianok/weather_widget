@@ -6,8 +6,14 @@ import { data } from "../data/data.js";
 
 const WeatherContent = () => {
   const container = useRef(null);
+  const btnLeft = useRef();
+  const btnRight = useRef();
   const tempLine = [];
   const pressLine = [];
+
+  const weatherElement = data.map(item => {
+    return <WeatherElement key={item.id} {...item} />;
+  });
 
   for (let i = 0; i < data.length - 1; i++) {
     tempLine.push(
@@ -22,78 +28,70 @@ const WeatherContent = () => {
       />
     );
   }
+
   for (let i = 0; i < data.length - 1; i++) {
     pressLine.push(
       <LineTo
         key={i}
         from={`press-dot-${i}`}
         to={`press-dot-${i + 1}`}
-        borderWidth={1}
+        borderWidth={2}
         borderColor="#000"
         delay={true}
         within="scroll_container"
       />
     );
   }
-  const weatherElement = data.map((item, index) => {
-    return <WeatherElement key={index} {...item} index={index} />;
-  });
 
   const handleShowButtons = () => {
-    const btnLeft = document.getElementById("btnLeft");
-    const btnRight = document.getElementById("btnRight");
-    const scrollContainer = document.querySelector(".scroll_container");
+    const scrollContainer = container.current.getElement();
 
     if (scrollContainer.scrollLeft === 0) {
-      btnRight.style.display = "block";
+      btnRight.current.style.display = "block";
     } else if (
       scrollContainer.scrollWidth - scrollContainer.scrollLeft ===
       scrollContainer.clientWidth
     ) {
-      btnLeft.style.display = "block";
+      btnLeft.current.style.display = "block";
     } else {
-      btnLeft.style.display = "block";
-      btnRight.style.display = "block";
+      btnLeft.current.style.display = "block";
+      btnRight.current.style.display = "block";
     }
   };
 
   const handleHideButtons = () => {
-    const btnLeft = document.getElementById("btnLeft");
-    const btnRight = document.getElementById("btnRight");
-    btnLeft.style.display = "none";
-    btnRight.style.display = "none";
+    btnLeft.current.style.display = "none";
+    btnRight.current.style.display = "none";
   };
 
   const handleShowLeftBtn = () => {
-    const btnLeft = document.getElementById("btnLeft");
-    const btnRight = document.getElementById("btnRight");
-    const scrollContainer = document.querySelector(".scroll_container");
+    const scrollContainer = container.current.getElement();
+
     if (scrollContainer.scrollLeft >= 100) {
-      btnLeft.style.display = "block";
+      btnLeft.current.style.display = "block";
     } else {
-      btnLeft.style.display = "none";
+      btnLeft.current.style.display = "none";
     }
 
     if (
       scrollContainer.scrollWidth - scrollContainer.scrollLeft ===
       scrollContainer.clientWidth
     ) {
-      btnRight.style.display = "none";
+      btnRight.current.style.display = "none";
     } else {
-      btnRight.style.display = "block";
+      btnRight.current.style.display = "block";
     }
   };
 
   const handleScrollStepLeft = () => {
-    const scrollContainer = document.querySelector(".scroll_container");
-    scrollContainer.scrollBy({
+    container.current.getElement().scrollBy({
       left: -100,
       behavior: "smooth"
     });
   };
+
   const handleScrollStepRight = () => {
-    const scrollContainer = document.querySelector(".scroll_container");
-    scrollContainer.scrollBy({
+    container.current.getElement().scrollBy({
       left: 100,
       behavior: "smooth"
     });
@@ -137,11 +135,13 @@ const WeatherContent = () => {
       <div
         id="btnLeft"
         className="weather_content__scrollBtnLeft"
+        ref={btnLeft}
         onClick={handleScrollStepLeft}
       ></div>
       <div
         id="btnRight"
         className="weather_content__scrollBtnRight"
+        ref={btnRight}
         onClick={handleScrollStepRight}
       ></div>
     </div>

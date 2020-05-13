@@ -16,7 +16,10 @@ html {
 }
 
 body {
-  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .widget_container {
