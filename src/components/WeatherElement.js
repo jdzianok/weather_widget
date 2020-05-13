@@ -23,6 +23,7 @@ const WeatherElement = props => {
   let picture;
   let arrowStyle;
 
+  // funkcja do storzenia randomowej liczby między -10 a 10, której używam do uzyskania minimalnego odchylenia przy rotacji strzałek wiatru
   const randomNumber = () => Math.floor(Math.random() * 21) - 10;
 
   switch (windDir) {
@@ -48,7 +49,7 @@ const WeatherElement = props => {
       break;
     case "Zachodni":
       arrowStyle = {
-        transform: "rotate(0)"
+        transform: `rotate(${randomNumber()}deg)`
       };
       break;
     default:

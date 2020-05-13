@@ -1,16 +1,15 @@
 .legend {
-  box-shadow: 1.2rem 0 0.5rem -0.5rem rgba(160, 160, 160, 0.2);
+  box-shadow: $box-shadow-legend;
   width: 30rem;
-  color: #888;
+  color: $font-color-legend;
   font-weight: 400;
   letter-spacing: 0.06rem;
-  // border: 1px solid red;
 
   &__item {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 0.2rem solid rgba(212, 212, 212, 0.4);
+    border-bottom: $border-grey;
     font-size: 1.5rem;
     text-align: center;
 

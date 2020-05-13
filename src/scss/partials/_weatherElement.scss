@@ -1,19 +1,19 @@
 .weather_column {
   flex-shrink: 0;
-  flex-basis: 9rem;
+  flex-basis: 10rem;
 
   &__border_wrapper {
-    border-right: 0.2rem solid rgba(212, 212, 212, 0.4);
+    border-right: $border-grey;
   }
   &__day {
     height: $day-height;
     font-size: 1.8rem;
     padding: 0.5rem 0 0 1rem;
-    color: rgb(212, 212, 212);
+    color: $font-color-day;
   }
   &__hour {
     height: $hour-height;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 500;
     text-align: center;
     line-height: $hour-height;
@@ -24,7 +24,7 @@
 
     &_image {
       display: block;
-      height: 100%;
+      height: 110%;
       margin: 0 auto;
     }
   }
@@ -49,8 +49,8 @@
         display: block;
         width: 1.4rem;
         height: 1.4rem;
-        border: 0.1rem solid #000;
-        background-color: #fff;
+        border: 0.1rem solid $color-black;
+        background-color: $color-white;
         border-radius: 50%;
         margin: 0.3rem auto 0;
       }
@@ -68,7 +68,7 @@
     }
     &_bar {
       width: 100%;
-      background-color: #3fd7f8;
+      background-color: $background-precipitation-bar;
     }
   }
 
@@ -76,7 +76,7 @@
     position: relative;
     height: $wind-dir-height;
     width: 100%;
-    background-color: #edefed;
+    background-color: $background-wind;
 
     &_image {
       display: block;
@@ -85,7 +85,7 @@
     }
 
     &_description {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       text-align: center;
     }
   }
@@ -97,21 +97,21 @@
     right: -2px;
     width: 2px;
     height: $wind-dir-height + $wind-speed-height;
-    background-color: #fff;
+    background-color: $color-white;
   }
 
   &__wind_speed {
     height: $wind-speed-height;
     padding: 2rem 0;
     text-align: center;
-    background-color: #edefed;
+    background-color: $background-wind;
 
     &_description {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       margin-bottom: 1rem;
     }
     &_value {
-      font-size: 1.8rem;
+      font-size: 1.9rem;
     }
   }
 
@@ -128,7 +128,7 @@
       z-index: 2;
     }
     &_value {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       font-weight: 400;
     }
 
@@ -136,14 +136,10 @@
       display: block;
       width: 1.4rem;
       height: 1.4rem;
-      border: 0.1rem solid #000;
-      background-color: #fff;
+      border: 0.1rem solid $color-black;
+      background-color: $color-white;
       border-radius: 50%;
       margin: 0.3rem auto 0;
     }
   }
-}
-
-.weather_column:last-child .weather_column__wind_dir::after {
-  display: none;
 }

@@ -1,6 +1,65 @@
 .weather_content {
-  display: flex;
   position: relative;
-  // width: 1090px;
   overflow-x: scroll;
+  border-bottom: $border-grey;
+  cursor: pointer;
+
+  .scroll_container {
+    display: flex;
+    position: relative;
+  }
+
+  &__scrollBtnLeft,
+  &__scrollBtnRight {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 10rem;
+    width: 5rem;
+    opacity: 0.2;
+    background-color: $background-button-grey;
+    transition: opacity ease 0.2s;
+    cursor: pointer;
+  }
+
+  &__scrollBtnLeft {
+    left: 0;
+    border-bottom-right-radius: 10rem;
+    border-top-right-radius: 10rem;
+  }
+
+  &__scrollBtnRight {
+    right: 0;
+    border-bottom-left-radius: 10rem;
+    border-top-left-radius: 10rem;
+  }
+
+  &__scrollBtnLeft:hover,
+  &__scrollBtnRight:hover {
+    opacity: 0.3;
+  }
+
+  &__scrollBtnLeft::after,
+  &__scrollBtnRight::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+
+  &__scrollBtnLeft::after {
+    left: 50%;
+    transform: translate(-70%, -50%);
+    border-right: 20px solid $color-white;
+  }
+
+  &__scrollBtnRight::after {
+    right: 50%;
+    transform: translate(70%, -50%);
+    border-left: 20px solid $color-white;
+  }
 }
